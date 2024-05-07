@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+canvas,
+video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* uncomment below to make it fullscreen */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+video {
+  transform: scaleX(-1);
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover; */
+
+}
+
+canvas {
+  z-index: 1;
+}
