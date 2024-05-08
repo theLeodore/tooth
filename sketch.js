@@ -114,6 +114,19 @@ let sketch = function (p) {
     moving = false; // Ensure movement stops when resetting
   }
 
+  // Click to reset
+  p.mousePressed = function() {
+    // Check if the click was inside the reset area
+    if (p.mousePressed) {
+      resetProgress();
+    }
+  }
+
+  function resetProgress() {
+    progress = 0;
+    resetClicked = true;
+  }
+
   function drawProgress() {
     if (moving) {
       progress += speed;
