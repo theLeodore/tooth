@@ -30,10 +30,12 @@ let sketch = function (p) {
   p.setup = function () {
     p.createCanvas(w, h);
     p.colorMode(p.HSB);
-    // Create reset button
-    let resetButton = p.createButton('Restart Brushing');
-    resetButton.position(p.width / 2 - 60, p.height + barHeight);
-    resetButton.mousePressed(resetProgress);
+    
+    
+    // // Create reset button
+    // let resetButton = p.createButton('Restart Brushing');
+    // resetButton.position(p.width / 2 - 60, p.height + barHeight);
+    // resetButton.mousePressed(resetProgress);
   };
 
 
@@ -61,11 +63,11 @@ let sketch = function (p) {
       // console.log(distance);
       const midPoint = p5.Vector.lerp(mouth, toothBrushCenter, 0.5);
       // Distance Counter:
-      p.stroke(240, 100, 100);
-      p.strokeWeight(2);
-      p.line(mouth.x, mouth.y, toothBrushCenter.x, toothBrushCenter.y)
-      p.noStroke();
-      p.text(distance, midPoint.x, midPoint.y)
+      // p.stroke(240, 100, 100);
+      // p.strokeWeight(2);
+      // p.line(mouth.x, mouth.y, toothBrushCenter.x, toothBrushCenter.y)
+      // p.noStroke();
+      // p.text(distance, midPoint.x, midPoint.y)
 
 
       // this is where we:
@@ -121,7 +123,7 @@ let sketch = function (p) {
     // p.fill(200);
     // p.rectMode(p.CORNER);
     // p.rect(p.width/2 - 200, 500, 400, 50);
-    p.fill(200, 204); // 80% transparent
+    p.fill(200, 204);
     p.rectMode(p.CORNER);
     p.push()
     p.rectMode(p.CENTER)
@@ -182,6 +184,7 @@ let sketch = function (p) {
     p.textAlign(p.CENTER, p.CENTER);
     p.textSize(16);
     p.text(percent.toFixed(1) + '%', p.width / 2, p.height / 2 + 250);
+    
   }
 
   function drawFaces() {
